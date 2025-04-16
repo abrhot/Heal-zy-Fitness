@@ -1,0 +1,43 @@
+/* Custom styles for about page */
+
+/* Hero section overlay */
+.relative h-96 {
+    position: relative;
+}
+
+.relative h-96 img {
+    filter: brightness(0.7);
+}
+
+/* Team member cards */
+.bg-gray-800.rounded-lg {
+    transition: transform 0.3s ease;
+}
+
+.bg-gray-800.rounded-lg:hover {
+    transform: scale(1.05);
+}
+
+/* Social media icons */
+.flex.space-x-4 a {
+    transition: color 0.3s ease;
+}
+
+/* Contact form inputs */
+input, textarea {
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.5);
+}
+
+/* Buttons */
+button, a.inline-block {
+    transition: background-color 0.3s ease;
+}
+
+/* Footer links */
+footer a {
+    transition: color 0.3s ease;
+} 
