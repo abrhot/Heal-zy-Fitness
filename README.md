@@ -14,3 +14,4 @@ Empowering you to build a stronger, healthier, and more energized life — one r
 
 ## 📁 Project Structure
 
+Heal-zy Fitness/ │ ├── index.html # Homepage ├── login.html # User login page ├── register.html # User registration page ├── css/ │ └── style.css # Custom styling ├── js/ │ └── main.js # Interactivity and animations ├── images/ # All visuals and assets └── node/ # Backend codebase (Node.js init here)
