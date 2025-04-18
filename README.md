@@ -5,13 +5,12 @@ Empowering you to build a stronger, healthier, and more energized life — one r
 
 ## 🔥 Features
 
-- ✨ **Interactive Homepage** — Eye-catching visuals and a modern UI to keep users engaged
-- 📸 **Transformation Slider** — Real-time progress motivation with dynamic slides
-- 📱 **Responsive Design** — Looks great on all devices: mobile, tablet, or desktop
-- 🧠 **User Authentication** — Secure login and account creation (in development)
-- 🔗 **Create Account Button** — Seamless redirection to `register.html`
-- 🎯 **Personalized Fitness Plans** (Coming Soon!) — Workouts and nutrition tailored just for you
+- ✨ **Interactive Homepage** — Eye-catching visuals with a sleek, modern interface
+- 📸 **Transformation Slider** — Track your journey with real-time progress visuals
+- 📱 **Responsive Design** — Optimized for mobile, tablet, and desktop devices
+- 🔐 **User Authentication** *(In Development)* — Secure login and account creation
+- 🧭 **Create Account Button** — Instantly redirects to `register.html` for a smooth sign-up experience
+- 🎯 **Personalized Fitness Plans** *(Coming Soon)* — Custom workouts and nutrition tailored to your goals
 
 ## 📁 Project Structure
 
-Heal-zy Fitness/ │ ├── index.html # Homepage ├── login.html # User login page ├── register.html # User registration page ├── css/ │ └── style.css # Custom styling ├── js/ │ └── main.js # Interactivity and animations ├── images/ # All visuals and assets └── node/ # Backend codebase (Node.js init here)
