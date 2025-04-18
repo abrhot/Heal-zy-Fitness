@@ -14,3 +14,29 @@ Empowering you to build a stronger, healthier, and more energized life — one r
 
 ## 📁 Project Structure
 
+Heal-zyFitness/
+├── index.html               # 🏠 Homepage
+├── login.html               # 🔐 Login page for existing users
+├── register.html            # 📝 User registration page
+
+├── css/                     # 🎨 Stylesheets
+│   └── style.css            #   • Main custom styles
+
+├── js/                      # ⚙️ JavaScript files
+│   └── main.js              #   • Core interactivity and animations
+
+├── images/                  # 🖼️ Visual assets
+│   ├── logo.png             #   • Site logo
+│   ├── hero-banner.jpg      #   • Hero section background
+│   └── ...                  #   • Other UI assets and icons
+
+├── node/                    # 🧠 Backend logic (Node.js)
+│   ├── app.js               #   • Entry point of the backend
+│   ├── routes/              #   • Express route handlers
+│   ├── controllers/         #   • Logic for handling requests
+│   ├── models/              #   • MongoDB/Mongoose schemas
+│   ├── middleware/          #   • Auth and validation middleware
+│   └── config/              #   • Environment & DB config files
+
+└── README.md                # 📖 Project overview (you’re reading it!)
+
