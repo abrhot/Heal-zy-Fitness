@@ -12,31 +12,28 @@ Empowering you to build a stronger, healthier, and more energized life — one r
 - 🧭 **Create Account Button** — Instantly redirects to `register.html` for a smooth sign-up experience
 - 🎯 **Personalized Fitness Plans** *(Coming Soon)* — Custom workouts and nutrition tailored to your goals
 
-## 📁 Project Structure
-
 Heal-zyFitness/
-├── index.html               # 🏠 Homepage
-├── login.html               # 🔐 Login page for existing users
-├── register.html            # 📝 User registration page
+├── index.html               # 🏠 The main homepage
+├── login.html               # 🔐 Login page for returning users
+├── register.html            # 📝 Registration page for new users
 
-├── css/                     # 🎨 Stylesheets
-│   └── style.css            #   • Main custom styles
+├── css/                     # 🎨 All styling files live here
+│   └── style.css            #   • Main stylesheet for layout and design
 
-├── js/                      # ⚙️ JavaScript files
-│   └── main.js              #   • Core interactivity and animations
+├── js/                      # ⚙️ JavaScript for interactivity
+│   └── main.js              #   • Handles UI behavior and animations
 
-├── images/                  # 🖼️ Visual assets
-│   ├── logo.png             #   • Site logo
-│   ├── hero-banner.jpg      #   • Hero section background
-│   └── ...                  #   • Other UI assets and icons
+├── images/                  # 🖼️ Visual elements and assets
+│   ├── logo.png             #   • The site’s logo
+│   ├── hero-banner.jpg      #   • Background for the hero section
+│   └── ...                  #   • Other icons and images
 
-├── node/                    # 🧠 Backend logic (Node.js)
-│   ├── app.js               #   • Entry point of the backend
-│   ├── routes/              #   • Express route handlers
-│   ├── controllers/         #   • Logic for handling requests
-│   ├── models/              #   • MongoDB/Mongoose schemas
-│   ├── middleware/          #   • Auth and validation middleware
-│   └── config/              #   • Environment & DB config files
+├── node/                    # 🧠 Backend logic (built with Node.js)
+│   ├── app.js               #   • Main entry point of the backend
+│   ├── routes/              #   • Route definitions for API endpoints
+│   ├── controllers/         #   • Logic for handling incoming requests
+│   ├── models/              #   • MongoDB models (using Mongoose)
+│   ├── middleware/          #   • Custom auth & validation logic
+│   └── config/              #   • Environment variables and DB settings
 
-└── README.md                # 📖 Project overview (you’re reading it!)
-
+└── README.md                # 📖 This file – your guide through the project
