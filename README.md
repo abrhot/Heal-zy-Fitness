@@ -12,6 +12,9 @@ Empowering you to build a stronger, healthier, and more energized life — one r
 - 🧭 **Create Account Button** — Instantly redirects to `register.html` for a smooth sign-up experience
 - 🎯 **Personalized Fitness Plans** *(Coming Soon)* — Custom workouts and nutrition tailored to your goals
 
+
+## 📁 Project Structure
+
 Heal-zyFitness/
 ├── index.html               # 🏠 The main homepage
 ├── login.html               # 🔐 Login page for returning users
