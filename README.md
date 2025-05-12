@@ -1,44 +1,55 @@
-# 💪 Heal-zyFitness
+# 🏋️‍♂️ Heal-zyFitness
 
-**Heal-zyFitness** is a web-based fitness companion designed to help users build a stronger, healthier lifestyle — right from their browser. Whether you're just starting or deep into your fitness journey, Heal-zy is built to grow with you.
-
----
-
-## 🚀 Features
-
-- 🏠 **Homepage:** Sleek, responsive, and motivating layout  
-- 🖼️ **Progress Slider:** Visualize your transformation (coming soon)  
-- 🔐 **User Login & Sign-Up:** Secure authentication system (in progress)  
-- 📱 **Fully Responsive:** Works perfectly on mobile, tablet, and desktop  
-- 🧭 **Quick Access Button:** Instantly navigate to the sign-up page  
-- 🎯 **Custom Plans:** Personalized workouts and nutrition (coming soon)
+**Heal-zyFitness** is a modern, web-based fitness companion built to empower users on their journey to better health. With sleek visuals, responsive design, and powerful backend support, it provides a seamless experience across all devices — whether you're starting your first workout or tracking long-term progress.
 
 ---
 
-## 📁 Project Structure
+## 🔥 Key Features
 
+- ✨ **Interactive Homepage** – Clean, modern UI designed for motivation
+- 📱 **Fully Responsive** – Optimized for mobile, tablet, and desktop
+- 🖼️ **Transformation Slider** – Track progress visually (coming soon)
+- 🔐 **User Authentication** – Secure login and registration system *(in progress)*
+- 🎯 **Personalized Plans** – Custom workout & nutrition recommendations *(coming soon)*
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **HTML + CSS + JS** – Frontend
-- **Node.js + Express** – Backend
-- **MongoDB** – Database (Mongoose)
-- **Responsive Design** – Mobile-first approach
+| Layer        | Technology                        |
+|--------------|-----------------------------------|
+| Frontend     | HTML, CSS, JavaScript             |
+| Backend      | Node.js, Express.js               |
+| Database     | MongoDB (via Mongoose)            |
+| Auth         | JWT (JSON Web Tokens) *(planned)* |
+| Design       | Responsive, Mobile-First Layout   |
 
 ---
 
-## 📌 Status
+## 🗂️ Project Structure
 
-🚧 Work in Progress  
-Some features (like user authentication and custom fitness plans) are still under development.
+Heal-zyFitness/
+├── index.html          → Main homepage
+├── login.html          → User login page
+├── register.html       → Sign-up page
 
----
+├── css/
+│   └── style.css       → Website styling
 
-## 📞 Contact
+├── js/
+│   └── main.js         → Interactive behavior & animations
 
-For feedback or questions, feel free to reach out or fork the repo and contribute!
+├── images/
+│   ├── logo.png        → Logo file
+│   ├── hero-banner.jpg → Homepage banner
+│   └── ...             → Other icons/images
 
----
+├── node/               → Backend (Node.js)
+│   ├── app.js          → Server setup
+│   ├── routes/         → URL endpoints
+│   ├── controllers/    → Logic for each route
+│   ├── models/         → Database models (Mongoose)
+│   ├── middleware/     → Auth & validation
+│   └── config/         → DB & environment settings
 
+└── README.md           → Project overview (this file)
