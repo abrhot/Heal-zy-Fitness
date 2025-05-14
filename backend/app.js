@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // API Routes
-app.use('/api/auth', authRoutes);        // 🔐 Authentication routes
+app.use('/api/auth', authRoutes);        // 🔐 Authentication routess
 app.use('/api/progress', progressRoutes); // 📈 Progress tracking routes
 
 // Serve the main HTML file
