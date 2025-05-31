@@ -15,6 +15,14 @@ const Profile = () => {
   const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
 
+  const [workoutPlan, setWorkoutPlan] = useState(null);
+  const [nutritionPlan, setNutritionPlan] = useState(null);
+  const [generatingWorkout, setGeneratingWorkout] = useState(false);
+  const [generatingNutrition, setGeneratingNutrition] = useState(false);
+  const [planError, setPlanError] = useState('');
+  const [planSuccess, setPlanSuccess] = useState('');
+
+
   useEffect(() => {
     const fetchProfile = async () => {
       const token = localStorage.getItem('token');
@@ -133,6 +141,71 @@ const Profile = () => {
   if (loading) return <p>Loading profile...</p>;
   // if (error) return <p style={{ color: 'red' }}>Error: {error}</p>; // Handled inline below
 
+  const handleGenerateWorkoutPlan = async () => {
+    setGeneratingWorkout(true);
+    setPlanError('');
+    setPlanSuccess('');
+    const token = localStorage.getItem('token');
+    if (!token) {
+      setPlanError('Authentication token not found. Please login.');
+      setGeneratingWorkout(false);
+      return;
+    }
+
+    try {
+      const res = await fetch('/api/plan/workout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.message || 'Failed to generate workout plan.');
+      }
+      setWorkoutPlan(data);
+      setPlanSuccess('Workout plan generated successfully!');
+    } catch (err) {
+      setPlanError(err.message);
+    } finally {
+      setGeneratingWorkout(false);
+    }
+  };
+
+  const handleGenerateNutritionPlan = async () => {
+    setGeneratingNutrition(true);
+    setPlanError('');
+    setPlanSuccess('');
+    const token = localStorage.getItem('token');
+    if (!token) {
+      setPlanError('Authentication token not found. Please login.');
+      setGeneratingNutrition(false);
+      return;
+    }
+
+    try {
+      const res = await fetch('/api/plan/nutrition', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.message || 'Failed to generate nutrition plan.');
+      }
+      setNutritionPlan(data);
+      setPlanSuccess('Nutrition plan generated successfully!');
+    } catch (err) {
+      setPlanError(err.message);
+    } finally {
+      setGeneratingNutrition(false);
+    }
+  };
+
+
   return (
     <div>
       <h2>User Profile</h2>
@@ -189,6 +262,46 @@ const Profile = () => {
             </div>
             <button type="submit">Update Profile</button>
           </form>
+          <hr />
+          <h3>Generate Plans</h3>
+          {planError && <p style={{ color: 'red' }}>Plan Error: {planError}</p>}
+          {planSuccess && <p style={{ color: 'green' }}>{planSuccess}</p>}
+          <div>
+            <button onClick={handleGenerateWorkoutPlan} disabled={generatingWorkout}>
+              {generatingWorkout ? 'Generating...' : 'Generate My Workout Plan'}
+            </button>
+            {workoutPlan && (
+              <div>
+                <h4>Generated Workout Plan:</h4>
+                <p>Name: {workoutPlan.planName}</p>
+                <p>Goal: {workoutPlan.goal}</p>
+                <pre style={{whiteSpace: 'pre-wrap', background: '#f4f4f4', padding: '10px', borderRadius: '5px'}}>
+                    {workoutPlan.plan.map(p => `${p.day}: ${p.activities.join(', ')}`).join('\n')}
+                </pre>
+              </div>
+            )}
+          </div>
+          <div style={{marginTop: '10px'}}>
+            <button onClick={handleGenerateNutritionPlan} disabled={generatingNutrition}>
+              {generatingNutrition ? 'Generating...' : 'Generate My Nutrition Plan'}
+            </button>
+            {nutritionPlan && (
+              <div>
+                <h4>Generated Nutrition Plan:</h4>
+                <p>Name: {nutritionPlan.planName}</p>
+                <p>Goal: {nutritionPlan.goal}</p>
+                <h5>Meals:</h5>
+                <p>Breakfast: {nutritionPlan.meals.breakfast}</p>
+                <p>Lunch: {nutritionPlan.meals.lunch}</p>
+                <p>Dinner: {nutritionPlan.meals.dinner}</p>
+                {nutritionPlan.meals.snacks && <p>Snacks: {nutritionPlan.meals.snacks}</p>}
+                <h5>Guidelines:</h5>
+                <ul>
+                    {nutritionPlan.guidelines.map((g, idx) => <li key={idx}>{g}</li>)}
+                </ul>
+              </div>
+            )}
+          </div>
         </>
       ) : (
         !loading && <p>Could not load profile data.</p> // Show this if not loading and no user data (and no error already shown)
