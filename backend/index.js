@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/auth'); // Import auth routes
 const userRoutes = require('./routes/user'); // Import user routes
+const planRoutes = require('./routes/plan'); // Import plan routes
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -14,6 +15,7 @@ app.use(express.json());
 // Mount auth routes
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes); // Mount user routes
+app.use('/api/plan', planRoutes); // Mount plan routes
 
 // Basic route
 app.get('/', (req, res) => {
