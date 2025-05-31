@@ -1,8 +1,10 @@
+/* frontend/src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
+  @apply bg-theme-primary-dark text-theme-text-light; /* Apply dark blue theme */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -14,4 +16,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Example of a global link style if needed */
+/*
+a {
+  @apply text-theme-accent-blue hover:text-theme-primary-light;
+}
+*/
+
+/* Ensure headings have good contrast / color */
+h1, h2, h3, h4, h5, h6 {
+    @apply text-theme-text-light;
 }
