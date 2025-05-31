@@ -3,6 +3,7 @@ require('dotenv').config(); // Must be at the very top
 const express = require('express');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/auth'); // Import auth routes
+const userRoutes = require('./routes/user'); // Import user routes
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -12,6 +13,7 @@ app.use(express.json());
 
 // Mount auth routes
 app.use('/api/auth', authRoutes);
+app.use('/api/user', userRoutes); // Mount user routes
 
 // Basic route
 app.get('/', (req, res) => {
