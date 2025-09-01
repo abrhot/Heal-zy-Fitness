@@ -1,6 +1,4 @@
-# Heal-zy Fitness Web Application
-
-A modern fitness tracking web application built with Node.js, Express, MongoDB, and Tailwind CSS.
+# 
 
 ## Features
 
@@ -119,4 +117,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Chart.js](https://www.chartjs.org/)
 - [Font Awesome](https://fontawesome.com/)
 - [MongoDB](https://www.mongodb.com/)
+
 - [Express.js](https://expressjs.com/) 
